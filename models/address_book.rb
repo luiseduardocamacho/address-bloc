@@ -1,8 +1,8 @@
 # #8
   require_relative 'entry'
 
- class AddressBook
-   attr_accessor :entries
+class AddressBook
+  attr_accessor :entries
 
    def initialize
      @entries = []
@@ -21,4 +21,4 @@
  # #11
      @entries.insert(index, Entry.new(name, phone_number, email))
    end
- end
+end
