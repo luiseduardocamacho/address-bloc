@@ -39,7 +39,7 @@ class AddressBook
       upper = @entries.length - 1
 
 # #2
-    while lower <= upper
+  while lower <= upper
 # #3
     mid = (lower + upper) / 2
     mid_name = @entries[mid].name
@@ -58,4 +58,18 @@ class AddressBook
   return nil
 
     end
+
+    def iterative_search(name)
+      lower = 0
+      upper = @entries.length - 1
+      while upper >= lower
+        if name == @entries[lower].name
+          return @entries[lower]
+        else
+          lower = lower + 1
+        end
+      end
+      return nil
+    end
+
 end
